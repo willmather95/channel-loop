@@ -1,0 +1,6 @@
+# HOME: run the loop once a day at 06:10 UTC. Ticks are idempotent and a lock stops overlap,
+# so a double fire or a manual run at the same time is harmless. Exit 3 = halted by the kill
+# switch, 5 = another runner is busy. SIMULATED account in this repo.
+#
+# one-time:  channel-loop init --state /var/lib/channel-loop --seed 7
+10 6 * * *  cd /opt/channel-loop && .venv/bin/channel-loop catch-up --state /var/lib/channel-loop --through "$(date -u +\%F)" >> /var/log/channel-loop.log 2>&1

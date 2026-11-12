@@ -1,0 +1,36 @@
+# ads-guardrail-agent config used by channel-loop for the SIMULATED Fieldnote account.
+# Every budget or bid change the loop wants goes through these caps. Writes land in an
+# in-memory fake account rebuilt from the audit log. Nothing touches a real ad platform.
+
+[writes]
+enabled = true   # SIMULATED account only. Keep false for any real account until you have read a week of dry runs.
+
+[kill_switch]
+file = "KILL_SWITCH"            # inside the state dir: `channel-loop kill on`
+env_var = "CHANNEL_LOOP_KILL"   # or export CHANNEL_LOOP_KILL=1
+
+[guardrails]
+account_daily_change_cap = 200     # sum of |budget change| per account per UTC day
+default_account_total_budget_cap = 1500
+cooldown_hours = 72
+max_changes_per_run = 4
+min_change = 1
+# Brand search (id ending 01) stays manual: the loop can never touch it.
+allowlist = [
+  "google_ads:9990001111:3100000000[2-9]",
+  "meta:act_000000000000042:*",
+]
+
+[guardrails.account_total_budget_cap]
+"9990001111" = 1400
+"act_000000000000042" = 850
+
+[guardrails.budget]
+max_change_pct = 20
+max_change_abs = 60
+floor = 20
+
+[guardrails.bid]
+max_change_pct = 15
+max_change_abs = 6
+floor = 2

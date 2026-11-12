@@ -1,0 +1,8 @@
+# Dev override: use sibling checkouts next to this repo instead of the pinned git URLs.
+#   ../ads-guardrail-agent  ../landing-page-lab
+-e ../ads-guardrail-agent
+-e ../landing-page-lab
+duckdb>=1.0
+numpy>=1.26
+PyYAML>=6
+pytest>=8

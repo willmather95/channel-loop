@@ -1,0 +1,25 @@
+# channel-loop settings. Every value has a default in src/channel_loop/config.py.
+
+[loop]
+policy = "loop"    # loop | loop_ts | greedy | random | static
+apply = true       # caller half of the write switch (config/guardrail.toml holds the other half)
+
+[agent]
+value_per_conversion = 60.0   # ASSUMPTION: value of one trial signup in the simulated account
+lookback_days = 14
+elasticity_prior = 0.7
+shift_amount = 60.0
+max_open_entity_measurements = 3
+
+[measure]
+pre_days = 7
+lag_days = 1
+post_days = 7
+creative_launch_lag_days = 3
+
+[bandit]
+prior_slope_mean = 1.0
+prior_slope_sd = 0.4
+prior_intercept_sd = 0.3
+model_noise_sd = 0.3
+

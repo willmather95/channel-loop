@@ -1,0 +1,89 @@
+# Landing-page brief for the SIMULATED Fieldnote account (same fictional product as the
+# landing-page-lab example). Fieldnote is FICTIONAL and every number below is made up.
+# channel-loop sets experiment.key and daily_visitors per test from warehouse data.
+product:
+  name: Fieldnote
+  one_liner: Appointment reminders that patients actually answer
+  category: appointment reminder software
+
+audience:
+  who: owners of independent physical therapy clinics
+  desired_outcome: a full schedule without extra phone time
+  pains:
+    - No-shows leave holes in the day that you still pay staff for
+    - Your front desk spends the morning on reminder calls
+    - Patients ignore generic texts from a no-reply number
+
+offer:
+  primary_cta: Start a 14-day trial
+  alt_ctas:
+    - Get my reminder setup
+    - See it on my schedule
+  risk_reversal: No card needed. Cancel in two clicks.
+
+proof:
+  - id: noshow
+    stat: "31%"
+    label: fewer no-shows in the first 60 days
+    source: "Fictional example figure for this demo brief"
+  - id: replies
+    stat: "68%"
+    label: of patients reply to a two-way reminder
+    source: "Fictional example figure for this demo brief"
+  - id: setup
+    stat: "15 min"
+    label: average setup with your existing calendar
+    source: "Fictional example figure for this demo brief"
+  - id: clinics
+    stat: "240"
+    label: clinics on the example customer list
+    source: "Fictional example figure for this demo brief"
+
+steps:
+  - title: Connect your calendar
+    body: Fieldnote reads your schedule. Nothing to re-enter.
+  - title: Pick your reminder rules
+    body: Two days before, the morning of, or both. Plain-language templates included.
+  - title: Patients reply, you see it
+    body: Confirm, cancel or reschedule by text. Open slots show up for your waitlist.
+
+features:
+  - title: Two-way texts
+    body: Patients answer a real number. Replies land in one shared inbox.
+  - title: Waitlist fill
+    body: When someone cancels, the next patient on the waitlist gets the offer.
+  - title: Works with your calendar
+    body: Syncs with the scheduling tools most small clinics already use.
+
+faq:
+  - q: How long does setup take?
+    a: Most clinics are sending reminders the same day. You connect a calendar and pick rules.
+  - q: What happens when a patient cancels?
+    a: The slot is offered to your waitlist by text, first reply wins.
+  - q: Do I need a credit card for the trial?
+    a: No. You only add a card if you decide to keep it.
+
+testimonials:
+  - quote: We stopped making reminder calls in the first week.
+    name: Sample Clinic Owner
+    role: Physical therapy clinic (fictional quote)
+
+brand_color: "#0a72e8"
+disclaimer: Demo page for a fictional product. All figures are examples.
+
+experiment:
+  key: fieldnote-loop
+  primary_event: lpl_signup
+  baseline_rate: 0.04
+  relative_mde: 0.20
+  daily_visitors: 2000
+  variants: 3
+  alpha: 0.05
+  power: 0.8
+
+# Optional section titles. Defaults are neutral ("How it works", "Results", ...).
+headings:
+  how: Up and running the same day
+  proof: What the example clinics see
+  features: Everything the front desk needs
+  faq: Before you start

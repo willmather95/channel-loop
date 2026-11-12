@@ -1,0 +1,7 @@
+# Sibling repos, pinned to the commits this repo was built and tested against.
+ads-guardrail-agent @ git+https://github.com/willmather95/ads-guardrail-agent@281243e003a78f5108c2bd92fd35d62d485b9c15
+landing-page-lab @ git+https://github.com/willmather95/landing-page-lab@44341092a97fb206adb1232f2d2a6f419653d907
+duckdb>=1.0
+numpy>=1.26
+PyYAML>=6
+pytest>=8

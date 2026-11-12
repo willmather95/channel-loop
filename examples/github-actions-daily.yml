@@ -1,0 +1,36 @@
+# HOME on GitHub Actions: one tick a day, state kept in a branch-free artifact cache.
+# Copy to .github/workflows/ to use. It needs no secrets for the SIMULATED account.
+# A live account would add its ad-platform secrets here and keep [writes] enabled = false
+# until a week of dry runs has been read by a person.
+name: channel-loop-daily
+on:
+  schedule:
+    - cron: "10 6 * * *"
+  workflow_dispatch: {}
+permissions:
+  contents: read
+concurrency:
+  group: channel-loop-tick   # never two ticks at once
+  cancel-in-progress: false
+jobs:
+  tick:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt && pip install -e . --no-deps
+      - uses: actions/cache/restore@v4
+        with:
+          path: state
+          key: channel-loop-state-${{ github.run_id }}
+          restore-keys: channel-loop-state-
+      - run: test -f state/loop-meta.json || channel-loop init --state state --seed 7
+      - run: channel-loop catch-up --state state --through "$(date -u +%F)"
+      - run: channel-loop journal replay --state state
+      - uses: actions/cache/save@v4
+        if: always()
+        with:
+          path: state
+          key: channel-loop-state-${{ github.run_id }}
