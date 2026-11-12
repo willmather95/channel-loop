@@ -1,0 +1,754 @@
+{
+  "label": "SIMULATED",
+  "seeds": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30
+  ],
+  "weeks": 12,
+  "policies": {
+    "loop": {
+      "mean_total_profit": 273559.49,
+      "actions": 16.566666666666666,
+      "ads_writes": 15.833333333333334,
+      "journals_intact": true
+    },
+    "loop_ts": {
+      "mean_total_profit": 273945.38,
+      "actions": 23.433333333333334,
+      "ads_writes": 27.5,
+      "journals_intact": true
+    },
+    "greedy": {
+      "mean_total_profit": 273133.18,
+      "actions": 20.066666666666666,
+      "ads_writes": 23.266666666666666,
+      "journals_intact": true
+    },
+    "random": {
+      "mean_total_profit": 280712.07,
+      "actions": 23.766666666666666,
+      "ads_writes": 29.333333333333332,
+      "journals_intact": true
+    },
+    "static": {
+      "mean_total_profit": 228577.91,
+      "actions": 0.0,
+      "ads_writes": 0.0,
+      "journals_intact": true
+    }
+  },
+  "comparisons": {
+    "loop_vs_static": {
+      "n": 30,
+      "mean": 44981.58,
+      "ci95": [
+        33817.66,
+        56750.02
+      ],
+      "p_one_sided": 1.999960000799984e-05,
+      "wins": 28,
+      "cumulative_weekly": {
+        "mean": [
+          587.39,
+          1758.58,
+          3410.35,
+          6396.58,
+          10247.99,
+          14016.15,
+          18546.19,
+          23779.8,
+          29156.03,
+          34444.52,
+          39928.37,
+          44981.58
+        ],
+        "lo": [
+          -663.46,
+          9.41,
+          789.28,
+          2918.3,
+          6066.93,
+          9226.17,
+          12741.36,
+          17116.7,
+          21576.23,
+          25821.4,
+          30094.54,
+          33989.83
+        ],
+        "hi": [
+          1825.25,
+          3488.44,
+          5982.69,
+          9941.3,
+          14588.99,
+          19001.15,
+          24794.38,
+          30987.64,
+          37141.77,
+          43494.23,
+          50398.16,
+          56833.85
+        ]
+      },
+      "weekly": {
+        "mean": [
+          587.39,
+          1171.19,
+          1651.77,
+          2986.23,
+          3851.4,
+          3768.16,
+          4530.04,
+          5233.62,
+          5376.22,
+          5288.49,
+          5483.85,
+          5053.21
+        ],
+        "lo": [
+          -663.46,
+          285.01,
+          537.23,
+          1551.15,
+          2715.33,
+          2789.42,
+          3127.91,
+          3845.92,
+          4004.61,
+          3673.83,
+          3698.73,
+          3536.74
+        ],
+        "hi": [
+          1825.25,
+          2074.68,
+          2781.63,
+          4461.07,
+          5117.86,
+          4806.44,
+          6048.16,
+          6703.76,
+          6734.65,
+          6890.38,
+          7241.1,
+          6634.3
+        ]
+      },
+      "first4_vs_last4_per_week": [
+        1599.15,
+        5300.44
+      ]
+    },
+    "loop_ts_vs_static": {
+      "n": 30,
+      "mean": 45367.47,
+      "ci95": [
+        35127.0,
+        56062.26
+      ],
+      "p_one_sided": 1.999960000799984e-05,
+      "wins": 29,
+      "cumulative_weekly": {
+        "mean": [
+          596.2,
+          1801.06,
+          3375.51,
+          6005.82,
+          9770.83,
+          13790.57,
+          18184.44,
+          23460.94,
+          28979.48,
+          34569.53,
+          40311.68,
+          45367.47
+        ],
+        "lo": [
+          -636.89,
+          111.65,
+          920.53,
+          2459.68,
+          5552.37,
+          9135.08,
+          12701.49,
+          17208.99,
+          21953.73,
+          26481.93,
+          31023.76,
+          35212.32
+        ],
+        "hi": [
+          1817.37,
+          3487.46,
+          5854.29,
+          9632.44,
+          14133.99,
+          18592.36,
+          24082.27,
+          30143.18,
+          36393.19,
+          43072.71,
+          50051.34,
+          56087.52
+        ]
+      },
+      "weekly": {
+        "mean": [
+          596.2,
+          1204.86,
+          1574.44,
+          2630.31,
+          3765.01,
+          4019.74,
+          4393.88,
+          5276.5,
+          5518.53,
+          5590.05,
+          5742.15,
+          5055.8
+        ],
+        "lo": [
+          -636.89,
+          365.44,
+          572.35,
+          1265.46,
+          2576.33,
+          3068.55,
+          3147.9,
+          4077.91,
+          4301.18,
+          3930.28,
+          4297.56,
+          3792.44
+        ],
+        "hi": [
+          1817.37,
+          2064.34,
+          2663.5,
+          4066.86,
+          5012.55,
+          4990.11,
+          5741.78,
+          6452.77,
+          6808.14,
+          7282.17,
+          7237.7,
+          6319.51
+        ]
+      },
+      "first4_vs_last4_per_week": [
+        1501.45,
+        5476.63
+      ]
+    },
+    "greedy_vs_static": {
+      "n": 30,
+      "mean": 44555.27,
+      "ci95": [
+        32900.37,
+        57051.12
+      ],
+      "p_one_sided": 1.999960000799984e-05,
+      "wins": 29,
+      "cumulative_weekly": {
+        "mean": [
+          587.39,
+          1674.37,
+          3102.81,
+          6106.9,
+          10005.3,
+          13433.51,
+          18335.51,
+          23566.73,
+          28921.24,
+          34304.94,
+          39604.6,
+          44555.27
+        ],
+        "lo": [
+          -663.46,
+          -30.66,
+          602.62,
+          2634.96,
+          5825.52,
+          8687.01,
+          12535.62,
+          16786.78,
+          21251.97,
+          25407.77,
+          29191.25,
+          32908.53
+        ],
+        "hi": [
+          1825.25,
+          3373.58,
+          5580.92,
+          9588.77,
+          14462.62,
+          18542.29,
+          24686.72,
+          30981.48,
+          37251.66,
+          43906.38,
+          50644.73,
+          57066.03
+        ]
+      },
+      "weekly": {
+        "mean": [
+          587.39,
+          1086.98,
+          1428.45,
+          3004.09,
+          3898.4,
+          3428.21,
+          4902.0,
+          5231.23,
+          5354.51,
+          5383.7,
+          5299.67,
+          4950.67
+        ],
+        "lo": [
+          -663.46,
+          246.96,
+          391.01,
+          1577.74,
+          2743.19,
+          2439.84,
+          3541.9,
+          3890.08,
+          3922.88,
+          3700.41,
+          3575.92,
+          3395.81
+        ],
+        "hi": [
+          1825.25,
+          1945.11,
+          2489.51,
+          4509.81,
+          5255.9,
+          4498.05,
+          6412.96,
+          6718.66,
+          6816.33,
+          7138.7,
+          7078.76,
+          6573.52
+        ]
+      },
+      "first4_vs_last4_per_week": [
+        1526.73,
+        5247.13
+      ]
+    },
+    "random_vs_static": {
+      "n": 30,
+      "mean": 52134.16,
+      "ci95": [
+        38751.99,
+        68195.23
+      ],
+      "p_one_sided": 1.999960000799984e-05,
+      "wins": 30,
+      "cumulative_weekly": {
+        "mean": [
+          1235.51,
+          3128.49,
+          5379.22,
+          9123.31,
+          13234.14,
+          17303.26,
+          22218.52,
+          27540.21,
+          33278.6,
+          39416.06,
+          46326.41,
+          52134.16
+        ],
+        "lo": [
+          314.79,
+          1943.62,
+          3575.04,
+          6507.66,
+          9762.84,
+          13295.54,
+          16698.47,
+          20621.3,
+          25056.34,
+          29554.88,
+          34638.92,
+          38789.02
+        ],
+        "hi": [
+          2201.48,
+          4358.66,
+          7172.62,
+          11710.72,
+          16479.7,
+          21424.69,
+          27934.8,
+          35092.85,
+          42429.12,
+          50753.79,
+          60112.69,
+          68032.22
+        ]
+      },
+      "weekly": {
+        "mean": [
+          1235.51,
+          1892.98,
+          2250.73,
+          3744.09,
+          4110.83,
+          4069.12,
+          4915.25,
+          5321.7,
+          5738.38,
+          6137.46,
+          6910.35,
+          5807.75
+        ],
+        "lo": [
+          314.79,
+          1074.99,
+          1295.83,
+          2389.24,
+          2796.45,
+          2903.98,
+          3186.98,
+          3616.35,
+          3996.84,
+          4063.58,
+          4563.31,
+          3813.23
+        ],
+        "hi": [
+          2201.48,
+          2716.39,
+          3212.2,
+          5046.23,
+          5540.48,
+          5398.89,
+          6806.23,
+          7321.77,
+          7833.75,
+          8531.49,
+          9636.71,
+          7990.05
+        ]
+      },
+      "first4_vs_last4_per_week": [
+        2280.83,
+        6148.49
+      ]
+    },
+    "loop_vs_random": {
+      "n": 30,
+      "mean": -7152.58,
+      "ci95": [
+        -21034.68,
+        5682.89
+      ],
+      "p_one_sided": 0.8419631607367852,
+      "wins": 15
+    },
+    "loop_vs_greedy": {
+      "n": 30,
+      "mean": 426.31,
+      "ci95": [
+        -2531.18,
+        3788.15
+      ],
+      "p_one_sided": 0.4121717565648687,
+      "wins": 15
+    },
+    "loop_vs_loop_ts": {
+      "n": 30,
+      "mean": -385.89,
+      "ci95": [
+        -7571.17,
+        5992.89
+      ],
+      "p_one_sided": 0.5387892242155157,
+      "wins": 16
+    }
+  },
+  "attribution": {
+    "n": 445,
+    "pearson_r": 0.859,
+    "mean_abs_error": 108.69,
+    "sign_agreement": 0.67,
+    "ci95_coverage": 0.908,
+    "by_arm": {
+      "budget_shift": {
+        "n": 187,
+        "mean_truth": 16.54,
+        "mean_estimate": 55.83
+      },
+      "bid_up": {
+        "n": 61,
+        "mean_truth": 1.49,
+        "mean_estimate": 37.08
+      },
+      "bid_down": {
+        "n": 19,
+        "mean_truth": 18.54,
+        "mean_estimate": 14.5
+      },
+      "creative_refresh": {
+        "n": 96,
+        "mean_truth": 147.67,
+        "mean_estimate": 45.62
+      },
+      "landing_test": {
+        "n": 82,
+        "mean_truth": 233.96,
+        "mean_estimate": 252.37
+      }
+    }
+  },
+  "action_mix": {
+    "loop": {
+      "first_6_weeks": {
+        "budget_shift": 135,
+        "bid_up": 56,
+        "bid_down": 14,
+        "creative_refresh": 60,
+        "landing_test": 61
+      },
+      "last_6_weeks": {
+        "budget_shift": 62,
+        "bid_up": 6,
+        "bid_down": 5,
+        "creative_refresh": 51,
+        "landing_test": 47
+      }
+    },
+    "loop_ts": {
+      "first_6_weeks": {
+        "budget_shift": 182,
+        "bid_up": 68,
+        "bid_down": 55,
+        "creative_refresh": 51,
+        "landing_test": 61
+      },
+      "last_6_weeks": {
+        "budget_shift": 150,
+        "bid_up": 13,
+        "bid_down": 25,
+        "creative_refresh": 50,
+        "landing_test": 48
+      }
+    },
+    "greedy": {
+      "first_6_weeks": {
+        "budget_shift": 171,
+        "bid_up": 62,
+        "bid_down": 9,
+        "creative_refresh": 53,
+        "landing_test": 61
+      },
+      "last_6_weeks": {
+        "budget_shift": 135,
+        "bid_up": 12,
+        "bid_down": 3,
+        "creative_refresh": 49,
+        "landing_test": 47
+      }
+    },
+    "random": {
+      "first_6_weeks": {
+        "budget_shift": 185,
+        "bid_up": 66,
+        "bid_down": 63,
+        "creative_refresh": 44,
+        "landing_test": 60
+      },
+      "last_6_weeks": {
+        "budget_shift": 172,
+        "bid_up": 10,
+        "bid_down": 27,
+        "creative_refresh": 44,
+        "landing_test": 42
+      }
+    },
+    "static": {
+      "first_6_weeks": {
+        "budget_shift": 0,
+        "bid_up": 0,
+        "bid_down": 0,
+        "creative_refresh": 0,
+        "landing_test": 0
+      },
+      "last_6_weeks": {
+        "budget_shift": 0,
+        "bid_up": 0,
+        "bid_down": 0,
+        "creative_refresh": 0,
+        "landing_test": 0
+      }
+    }
+  },
+  "learned_beliefs_mean": {
+    "budget_shift": {
+      "n": 6.233,
+      "w0": -0.103,
+      "w1": 0.841
+    },
+    "bid_up": {
+      "n": 2.033,
+      "w0": -0.145,
+      "w1": 0.918
+    },
+    "bid_down": {
+      "n": 0.633,
+      "w0": 0.002,
+      "w1": 1.002
+    },
+    "creative_refresh": {
+      "n": 3.2,
+      "w0": 0.162,
+      "w1": 1.089
+    },
+    "landing_test": {
+      "n": 2.733,
+      "w0": -0.187,
+      "w1": 0.137
+    }
+  },
+  "true_effect_of_actions": {
+    "loop": {
+      "n": 445,
+      "mean_true_effect": 82.91,
+      "share_harmful": 0.133
+    },
+    "loop_ts": {
+      "n": 626,
+      "mean_true_effect": 58.84,
+      "share_harmful": 0.182
+    },
+    "greedy": {
+      "n": 533,
+      "mean_true_effect": 66.26,
+      "share_harmful": 0.163
+    },
+    "random": {
+      "n": 635,
+      "mean_true_effect": 60.22,
+      "share_harmful": 0.194
+    },
+    "static": {
+      "n": 0,
+      "mean_true_effect": null,
+      "share_harmful": null
+    }
+  },
+  "ad_change_quality": {
+    "policies": {
+      "loop": {
+        "changes_per_run": 12.1,
+        "true_value_per_change": 48.79,
+        "share_harmful": 0.163,
+        "true_value_sum_per_run": 590.42,
+        "weeks_1_6_value_per_change": 47.19,
+        "weeks_7_12_value_per_change": 53.12,
+        "weeks_1_6_share_harmful": 0.166,
+        "weeks_7_12_share_harmful": 0.153
+      },
+      "loop_ts": {
+        "changes_per_run": 18.17,
+        "true_value_per_change": 31.24,
+        "share_harmful": 0.209,
+        "true_value_sum_per_run": 567.55,
+        "weeks_1_6_value_per_change": 30.66,
+        "weeks_7_12_value_per_change": 32.35,
+        "weeks_1_6_share_harmful": 0.205,
+        "weeks_7_12_share_harmful": 0.217
+      },
+      "greedy": {
+        "changes_per_run": 15.03,
+        "true_value_per_change": 37.52,
+        "share_harmful": 0.193,
+        "true_value_sum_per_run": 564.01,
+        "weeks_1_6_value_per_change": 40.93,
+        "weeks_7_12_value_per_change": 31.06,
+        "weeks_1_6_share_harmful": 0.19,
+        "weeks_7_12_share_harmful": 0.199
+      },
+      "random": {
+        "changes_per_run": 18.67,
+        "true_value_per_change": 29.21,
+        "share_harmful": 0.22,
+        "true_value_sum_per_run": 545.27,
+        "weeks_1_6_value_per_change": 29.6,
+        "weeks_7_12_value_per_change": 28.52,
+        "weeks_1_6_share_harmful": 0.187,
+        "weeks_7_12_share_harmful": 0.277
+      }
+    },
+    "comparisons": {
+      "loop_vs_random_value_per_change": {
+        "n": 30,
+        "mean": 17.91,
+        "ci95": [
+          13.06,
+          23.1
+        ],
+        "p_one_sided": 1.999960000799984e-05,
+        "wins": 27
+      },
+      "loop_vs_greedy_value_per_change": {
+        "n": 30,
+        "mean": 10.24,
+        "ci95": [
+          6.27,
+          14.51
+        ],
+        "p_one_sided": 3.999920001599968e-05,
+        "wins": 24
+      },
+      "loop_vs_loop_ts_value_per_change": {
+        "n": 30,
+        "mean": 15.75,
+        "ci95": [
+          11.24,
+          20.39
+        ],
+        "p_one_sided": 1.999960000799984e-05,
+        "wins": 26
+      }
+    }
+  }
+}

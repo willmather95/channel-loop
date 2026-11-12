@@ -1,0 +1,59 @@
+{
+  "label": "SIMULATED",
+  "seed": 7,
+  "start": "2026-09-07",
+  "weeks": 12,
+  "loop_total_profit": 341268.51,
+  "static_total_profit": 243403.34,
+  "difference": 97865.17,
+  "actions": 19,
+  "blocked_by_guardrails": 0,
+  "ads_writes": 17,
+  "landing_ships": [
+    "fieldnote-loop-20260907:b",
+    "fieldnote-loop-20261001:c"
+  ],
+  "journal": "910 records, chain intact",
+  "beliefs": {
+    "budget_shift": {
+      "arm": "budget_shift",
+      "n": 8,
+      "w0": -0.071871,
+      "w1": 0.889216,
+      "sd_w0": 0.251772,
+      "sd_w1": 0.372294
+    },
+    "bid_up": {
+      "arm": "bid_up",
+      "n": 1,
+      "w0": -0.409968,
+      "w1": 0.882343,
+      "sd_w0": 0.265044,
+      "sd_w1": 0.397961
+    },
+    "bid_down": {
+      "arm": "bid_down",
+      "n": 0,
+      "w0": 0.0,
+      "w1": 1.0,
+      "sd_w0": 0.3,
+      "sd_w1": 0.4
+    },
+    "creative_refresh": {
+      "arm": "creative_refresh",
+      "n": 5,
+      "w0": -0.007012,
+      "w1": 1.181292,
+      "sd_w0": 0.253359,
+      "sd_w1": 0.35605
+    },
+    "landing_test": {
+      "arm": "landing_test",
+      "n": 3,
+      "w0": -0.132327,
+      "w1": 0.137073,
+      "sd_w0": 0.291568,
+      "sd_w1": 0.132745
+    }
+  }
+}

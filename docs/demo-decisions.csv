@@ -1,0 +1,20 @@
+id,day,arm,target,x,outcome,y,se,method,truth
+d-20260907-ads,2026-09-07,budget_shift,Meta | Clinic Owners Prospecting -> Meta | Site Retargeting,56.02,clamped,32.5405,121.6615,diff-in-diff vs untouched campaigns,8.358568062408077
+d-20260907-site,2026-09-07,landing_test,/trial hero test,222.0,launched,943.012,342.5477,"A/B readout: shipped b, randomized control arm",787.595579919871
+d-20260908-ads,2026-09-08,bid_up,Meta | Lookalike 2%,16.14,applied,-170.6597,47.5308,diff-in-diff vs untouched campaigns,-24.03240030413159
+d-20260916-ads,2026-09-16,creative_refresh,Meta | Site Retargeting,35.24,queued,-55.2937,98.8133,diff-in-diff vs untouched campaigns,155.24634450385787
+d-20260921-ads,2026-09-21,budget_shift,Search | Clinic Scheduling -> Search | Competitor Terms,32.15,clamped,52.2036,90.4045,diff-in-diff vs untouched campaigns,27.361964218280086
+d-20260923-ads,2026-09-23,creative_refresh,Meta | Lookalike 2%,18.34,queued,104.7972,86.2012,diff-in-diff vs untouched campaigns,144.84485437478423
+d-20260928-ads,2026-09-28,budget_shift,Meta | Clinic Owners Prospecting -> Meta | Site Retargeting,59.88,clamped,-161.3089,107.5501,diff-in-diff vs untouched campaigns,13.43737065313414
+d-20260930-ads,2026-09-30,budget_shift,Search | Clinic Scheduling -> Search | Competitor Terms,33.12,clamped,163.4478,83.1244,diff-in-diff vs untouched campaigns,25.512218071325865
+d-20261001-site,2026-10-01,landing_test,/trial hero test,265.29,launched,740.1424,296.7104,"A/B readout: shipped c, randomized control arm",1197.250988076581
+d-20261007-ads,2026-10-07,budget_shift,Meta | Clinic Owners Prospecting -> Meta | Site Retargeting,65.13,clamped,246.5887,103.22,diff-in-diff vs untouched campaigns,15.456472946222775
+d-20261016-ads,2026-10-16,creative_refresh,Meta | Site Retargeting,77.96,queued,188.981,113.954,diff-in-diff vs untouched campaigns,255.0122991235616
+d-20261017-ads,2026-10-17,budget_shift,Search | Reminder Software -> Search | Competitor Terms,30.67,applied,-346.8974,162.589,diff-in-diff vs untouched campaigns,16.838800402889756
+d-20261022-ads,2026-10-22,creative_refresh,Meta | Lookalike 2%,32.93,queued,-166.6567,87.1346,diff-in-diff vs untouched campaigns,69.21133588873332
+d-20261025-site,2026-10-25,landing_test,/trial hero test,303.0,launched,0.0,5.0,"A/B readout: no_winner_keep_control, kept control (no change shipped)",0.0
+d-20261028-ads,2026-10-28,budget_shift,Meta | Clinic Owners Prospecting -> Meta | Site Retargeting,67.49,clamped,-183.6673,176.3872,diff-in-diff vs untouched campaigns,14.036068202599138
+d-20261106-ads,2026-11-06,budget_shift,Meta | Clinic Owners Prospecting -> Meta | Site Retargeting,67.54,clamped,-327.2164,211.5962,diff-in-diff vs untouched campaigns,5.799582275543516
+d-20261115-ads,2026-11-15,creative_refresh,Meta | Site Retargeting,99.04,queued,220.2267,76.8391,diff-in-diff vs untouched campaigns,148.3132244033263
+d-20261118-site,2026-11-18,landing_test,/trial hero test,316.71,launched,,,,
+d-20261120-ads,2026-11-20,creative_refresh,Meta | Lookalike 2%,36.77,queued,,,,

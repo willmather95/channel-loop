@@ -70,10 +70,10 @@ def shoot(html: str, out: Path, w: int = W, h: int = H) -> None:
 
 # --- hero -------------------------------------------------------------------------------------
 def chart_svg(summary: dict, decisions: list[dict]) -> str:
-    cw, ch = 940, 470
-    left, right, top = 70, 150, 30
+    cw, ch = 900, 492
+    left, right, top = 118, 132, 24
     plot_h = 300
-    strip_top = top + plot_h + 52
+    strip_top = top + plot_h + 64
     pw = cw - left - right
     loop = summary["comparisons"]["loop_vs_static"]["cumulative_weekly"]
     rnd = summary["comparisons"]["random_vs_static"]["cumulative_weekly"]
@@ -88,7 +88,7 @@ def chart_svg(summary: dict, decisions: list[dict]) -> str:
     def y(v: float) -> float:
         return top + plot_h - (v - ymin) / (ymax - ymin) * plot_h
 
-    o = [f'<svg viewBox="0 0 {cw} {ch}" width="{cw}" height="{ch}" role="img" '
+    o = [f'<svg viewBox="0 0 {cw} {ch}" width="100%" role="img" '
          'aria-label="Cumulative extra profit versus doing nothing, loop and random policy, 12 simulated weeks">']
     v = 0
     while v <= ymax:
@@ -115,7 +115,7 @@ def chart_svg(summary: dict, decisions: list[dict]) -> str:
     o.append(f'<text x="{left + pw + 12}" y="{ly + 17:.1f}" class="lab" fill="{T["accent_ink"]}">{money(loop["mean"][-1], True)}</text>')
     o.append(f'<text x="{left + pw + 12}" y="{ry - 2:.1f}" class="lab strong" fill="{T["ink2"]}">Random policy</text>')
     o.append(f'<text x="{left + pw + 12}" y="{ry + 17:.1f}" class="lab" fill="{T["muted"]}">{money(rnd["mean"][-1], True)}</text>')
-    o.append(f'<text x="{x(0.15):.1f}" y="{y(0) - 10:.1f}" class="lab" fill="{T["muted"]}">Doing nothing = $0</text>')
+    o.append(f'<text x="{x(weeks):.1f}" y="{y(0) - 8:.1f}" text-anchor="end" class="lab" fill="{T["muted"]}">Doing nothing = $0</text>')
     # decision strip for the demo seed
     rows = ["landing_test", "creative_refresh", "budget_shift", "bid_up", "bid_down"]
     o.append(f'<text x="{left}" y="{strip_top - 12}" class="lab strong" fill="{T["ink2"]}">'
@@ -172,7 +172,7 @@ background:{T['accent_soft']};border-radius:6px;padding:2px 7px;margin-right:11p
 .flow b{{color:{T['ink']};font-weight:600}}
 .foot{{margin-top:auto;font-size:14.5px;line-height:1.5;color:{T['muted']}}}
 .foot b{{color:{T['warn_ink']};font-weight:650}}
-.right{{display:flex;flex-direction:column;gap:18px}}
+.right{{display:flex;flex-direction:column;gap:18px;min-width:0}}
 .kpis{{display:grid;grid-template-columns:repeat(4,1fr);padding:20px 8px}}
 .kpi{{padding:4px 22px;border-left:1px solid {T['hairline']}}}.kpi:first-child{{border-left:0}}
 .kl{{font-size:14.5px;color:{T['ink2']}}}.kv{{font-size:38px;font-weight:650;letter-spacing:-1px;margin-top:8px}}
@@ -270,7 +270,7 @@ svg{{position:absolute;left:0;top:0}}
     svg.append("</svg>")
     return f"""<!doctype html><html><head><meta charset="utf-8"><style>{css}</style></head><body>
 <h2>channel-loop: how one tick flows</h2>
-<div class="lede">TRUTH in, one guarded change out, measured later, beliefs updated. Everything below the agent goes through another repo's limits.</div>
+<div class="lede">TRUTH in, one guarded change out, measured later, beliefs updated. Every change to the right of the agent goes through another repo's limits.</div>
 <div class="stage">{''.join(svg)}{''.join(html)}</div></body></html>"""
 
 
